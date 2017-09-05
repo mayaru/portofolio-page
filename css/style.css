@@ -1,28 +1,147 @@
-header {
-
+body {
+  position: relative;
+}
+.affix {
+    top: 0;
+    width: 100%;
+}
+.affix + .container-fluid {
+    padding-top: 70px;
 }
 
-.welcome-screen {
-  height: 100%;
-  /*position: relative;*/
+header {
+  height: 46vh;
+}
+
+header div {
+  height: 100vh;
+  z-index: 98;
+  background-image: url("http://formationcapital.com/images/bg_desert_image.jpg");
+  background-size: cover;
 }
 
 nav {
+  opacity: 0.9;
+  letter-spacing: 7px;
+  z-index:99;
+}
+.navbar-brand {
+  font-family: "Gloria Hallelujah";
+  font-size: 30px;
+  letter-spacing: 10px;
+}
+.navbar-header {
+  padding: 20px;
+}
+
+.tampon {
+  height: 45vh;
+}
+
+#article-1 {
+  padding: 25% 0;
+  font-family: sans-serif;
+  letter-spacing: 3px;
+  text-align: right;
+  font-weight: 100;
+}
+#article-1 h3 {
+  font-size: 45px;
+  /*text-align: left;*/
+}
+#article-1 p {
+  font-size: 25px;
+  padding-top: 25px;
+}
+
+#portofolio {
+  position: relative;
+  /*border: 1px solid black;*/
+  top: -200px;
+}
+
+#img-section-1 .col-md-8 {
+  height: 60%;
+  background-image: url("../images/section-1.jpg");
+  background-size: cover;
+}
+
+#img-section-2 {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+#img-section-2 .col-md-8 {
+  height: 60%;
+  background-image: url("../images/section-2.jpg");
+  background-size: cover;
+}
+
+#img-section-3 {
+  height: 60%;
+  background-color: blue;
+  background-image: url("../images/section-3.jpg");
+  background-size: cover;
+}
+
+.row .col-md-4 {
+  font-family: "Dosis", sans-serif;
+  line-height: 200%;
+  letter-spacing: 1px;
+  padding: 0 80px;
+}
+
+#contact {
+  position: relative;
+  /*border: 1px solid black;*/
+  top: -2px;
+}
+
+#contact-area {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+#contact-area h2 {
+  text-align: center;
+  margin: 60px;
+  font-family: Lato;
+  letter-spacing: 3px;
+}
+#contact-area form input {
+  display: block;
+  border: 0;
+  border-bottom: 1px solid #d3d3d3;
+  padding: 20px;
+  width: 80%;
+}
+#contact-area textarea {
+  border: 0;
+  border-bottom: 1px solid #d3d3d3;
+  width: 80%;
+  height: 250px;
+}#contact-area button {
+  display: block;
+  margin: 20px;
+}
+#map iframe {
   width: 100%;
-  /*margin: 0;
+  height: 60%;
+  /*margin: 30px;*/
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  height: 10%;
+  background-color: #222;
+  color: #fff;
+}
+footer p {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 60px;
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding: 25px 0;*/
 }
-
-main {
-  width: 100%;
-  height: 100%;
-  background-color: pink;
+footer a, footer a:hover {
+  text-decoration: none;
+  color: orange;
 }
