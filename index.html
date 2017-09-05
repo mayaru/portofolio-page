@@ -9,6 +9,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link href="https://fonts.googleapis.com/css?family=Dosis|Gloria+Hallelujah|Lato" rel="stylesheet">
   </head>
 <!-- BODY -->
@@ -19,7 +20,7 @@
     </header>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-inverse animated fadeIn">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -32,7 +33,7 @@
         <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav navbar-nav navbar-right">
             <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span>Home</a></li> -->
-            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#home">Home</a></li>
             <li><a href="#portofolio">Portofolio</a></li>
             <!-- <li><a href="#">About us</a></li> -->
             <li><a href="#contact">Contact</a></li>
@@ -136,6 +137,47 @@
       } // End if
     });
   });
+  </script>
+  <!-- Event Animation -->
+  <script type="text/javascript">
+  function onViewport(el, elClass, offset, callback) {
+    /*** Based on http://ejohn.org/blog/learning-from-twitter/ ***/
+    var didScroll = false;
+    var this_top;
+    var height;
+    var top;
+
+    if(!offset) { var offset = 0; }
+
+    $(window).scroll(function() {
+        didScroll = true;
+    });
+
+    setInterval(function() {
+      if (didScroll) {
+        didScroll = false;
+        top = $(this).scrollTop();
+
+        $(el).each(function(i){
+          this_top = $(this).offset().top - offset;
+          height   = $(this).height();
+
+          // Scrolled within current section
+          if (top >= this_top && !$(this).hasClass(elClass)) {
+            $(this).addClass(elClass);
+
+            if (typeof callback == "function") callback(el);
+          }
+        });
+      }
+    }, 100);
+  }
+  </script>
+  <script type="text/javascript">
+  onViewport("#contact", "active", 300, function() {
+    $('#map').addClass('animated bounceInRight');
+    });
+
   </script>
 </body>
 </html>

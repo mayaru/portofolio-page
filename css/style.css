@@ -39,7 +39,7 @@ nav {
 }
 
 #article-1 {
-  padding: 25% 0;
+  padding: 20% 0;
   font-family: sans-serif;
   letter-spacing: 3px;
   text-align: right;
@@ -89,6 +89,9 @@ nav {
   letter-spacing: 1px;
   padding: 0 80px;
 }
+.row .col-md-4 h3 {
+  padding: 25px 0;
+}
 
 #contact {
   position: relative;
@@ -113,12 +116,19 @@ nav {
   padding: 20px;
   width: 80%;
 }
+#contact-area form input:focus {
+  outline: 0;
+}
 #contact-area textarea {
   border: 0;
   border-bottom: 1px solid #d3d3d3;
   width: 80%;
   height: 250px;
-}#contact-area button {
+}
+#contact-area textarea:focus {
+  outline: 0;
+}
+#contact-area button {
   display: block;
   margin: 20px;
 }
